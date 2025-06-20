@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sobre - BELLA COLOR</title>
+  <meta name="description" content="Bella Color - Tecidos de alta qualidade para moda e decoração. Conheça nossa história e coleções.">
+  <meta name="keywords" content="tecidos, moda, decoração, Bella Color, São Paulo">
+  <style>
+    /* Reset e Estilos Globais */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    :root {
+      --rosa-claro: #ff99aa;
+      --rosa-medio: #ff4d6d;
+      --rosa-escuro: #b3003c;
+      --azul: #3366cc;
+      --branco: #ffffff;
+      --cinza-claro: #f8f9fa;
+      --cinza-texto: #555555;
+      --sombra: 0 4px 20px rgba(0,0,0,0.08);
+    }
+    
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: var(--cinza-texto);
+      background: url('https://www.transparenttextures.com/patterns/fabric-of-squares.png');
+      background-size: 300px 300px;
+      animation: animarFundo 30s linear infinite;
+      width: 100%;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+    
+    h1, h2, h3 {
+      color: var(--rosa-escuro);
+      font-weight: 700;
+    }
+    
+    p {
+      margin-bottom: 1rem;
+    }
+    
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    
+    /* Animação do fundo */
+    @keyframes animarFundo {
+      0% { background-position: 0 0; }
+      100% { background-position: 300px 300px; }
+    }
+    
+    /* Cabeçalho */
+    header {
+      background: linear-gradient(135deg, var(--rosa-claro), var(--rosa-medio));
+      color: var(--branco);
+      padding: 60px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect fill="rgba(255,255,255,0.1)" width="50" height="50" x="25" y="25" rx="10" ry="10"/></svg>');
+      opacity: 0.3;
+    }
+    
+    header h1 {
+      margin: 0;
+      font-size: 2.8rem;
+      position: relative;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    header p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 10px auto 0;
+      position: relative;
+    }
+    
+    /* Navegação */
+    nav {
+      background: var(--rosa-medio);
+      padding: 15px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    nav a {
+      color: var(--branco);
+      margin: 0 20px;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      padding: 8px 12px;
+      border-radius: 4px;
+    }
+    
+    nav a:hover {
+      background: rgba(255,255,255,0.2);
+    }
+    
+    /* Seções */
+    .section {
+      padding: 80px 5%;
+      position: relative;
+    }
+    
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+      position: relative;
+    }
+    
+    .section-title h2 {
+      font-size: 2.2rem;
+      display: inline-block;
+      padding-bottom: 10px;
+    }
+    
+    .section-title h2::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background: var(--rosa-medio);
+    }
+    
+    /* Cards de Produto */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+    
+    .product-card {
+      background: var(--branco);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--sombra);
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    
+    .product-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    }
+    
+    .product-image {
+      height: 200px;
+      width: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    
+    .product-card:hover .product-image {
+      transform: scale(1.05);
+    }
+    
+    .product-info {
+      padding: 20px;
+    }
+    
+    .product-info h3 {
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+    
+    .product-price {
+      color: var(--rosa-medio);
+      font-weight: bold;
+      font-size: 1.1rem;
+      margin-bottom: 15px;
+    }
+    
+    /* Botões */
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-weight: bold;
+      text-align: center;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border: none;
+    }
+    
+    .btn-primary {
+      background: var(--azul);
+      color: var(--branco);
+    }
+    
+    .btn-primary:hover {
+      background: #254aa5;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(51, 102, 204, 0.3);
+    }
+    
+    .btn-secondary {
+      background: var(--rosa-medio);
+      color: var(--branco);
+    }
+    
+    .btn-secondary:hover {
+      background: var(--rosa-escuro);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(255, 77, 109, 0.3);
+    }
+    
+    /* Layout Flexível */
+    .flex-container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 40px;
+    }
+    
+    .flex-item {
+      flex: 1;
+      min-width: 300px;
+    }
+    
+    /* Formulários */
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    .form-control {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+    
+    .form-control:focus {
+      border-color: var(--rosa-medio);
+      box-shadow: 0 0 0 3px rgba(255, 77, 109, 0.2);
+      outline: none;
+    }
+    
+    textarea.form-control {
+      min-height: 120px;
+      resize: vertical;
+    }
+    
+    /* Rodapé */
+    footer {
+      background: var(--rosa-escuro);
+      color: var(--branco);
+      padding: 50px 0 30px;
+      text-align: center;
+    }
+    
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      text-align: left;
+      padding: 0 20px;
+    }
+    
+    .footer-column h3 {
+      color: var(--branco);
+      margin-bottom: 20px;
+      font-size: 1.3rem;
+    }
+    
+    .footer-links {
+      list-style: none;
+    }
+    
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+    
+    .footer-links a {
+      color: rgba(255,255,255,0.8);
+      transition: all 0.3s ease;
+    }
+    
+    .footer-links a:hover {
+      color: var(--branco);
+      padding-left: 5px;
+    }
+    
+    .social-links {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+    
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      transition: all 0.3s ease;
+    }
+    
+    .social-links a:hover {
+      background: var(--branco);
+      color: var(--rosa-escuro);
+      transform: translateY(-3px);
+    }
+    
+    .copyright {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.7);
+    }
+    
+    /* Botão do WhatsApp */
+        .whatsapp-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #25D366;
+      color: white;
+      padding: 15px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+      display: flex;
+      align-items: center;
+      z-index: 999;
+      transition: all 0.3s ease;
+    }
+
+    .whatsapp-btn:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+    }
+
+    .whatsapp-btn img {
+      margin-right: 8px;
+      width: 24px;
+    }
+
+    /* Botão do Catálogo */
+    .catalogo-btn {
+      position: fixed;
+      bottom: 100px;
+      right: 30px;
+      background: var(--rosa-claro);
+      color: white;
+      padding: 12px 20px;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      z-index: 999;
+      transition: all 0.3s ease;
+    }
+
+    .catalogo-btn:hover {
+      background: var(--rosa-escuro);
+      transform: scale(1.05);
+    }
+
+    
+    /* Efeitos de transição */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    /* Responsividade */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      
+      nav a {
+        margin: 0 10px;
+        font-size: 0.9rem;
+      }
+      
+      .section {
+        padding: 60px 5%;
+      }
+      
+      .section-title h2 {
+        font-size: 1.8rem;
+      }
+      
+      .flex-container {
+        flex-direction: column;
+      }
+      
+      .flex-item {
+        width: 100%;
+      }
+      
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>BELLA COLOR</h1>
+  <p>Conheça nossa história e paixão pelos tecidos</p>
+</header>
+
+<nav>
+  <a href="PRINGLES.html">Voltar para a Loja</a>
+</nav>
+<!-- Seção Quem Somos -->
+<section class="section" style="background: #fff9fa;">
+  <div class="flex-container">
+    <div class="flex-item fade-in">
+      <div class="sobre" style="padding: 30px; background: white; border-radius: 16px; box-shadow: var(--sombra);">
+        <h2 style="color: var(--rosa-escuro); font-size: 28px; margin-bottom: 20px;">Quem Somos</h2>
+        <p>
+          A ✨BELLA COLOR✨ é muito mais do que uma empresa de tecidos — somos movidos por uma verdadeira paixão por cores, texturas e possibilidades criativas. Localizados no coração de São Paulo, na tradicional ✨Rua Silva Telles, 717✨, atuamos com o compromisso de oferecer aos nossos clientes ✨produtos de alta qualidade✨, com ✨variedade incomparável✨ e um ✨atendimento que valoriza cada detalhe✨.
+        </p>
+        <p>
+          Cada metro de tecido que sai da nossa loja carrega mais do que fios e tramas: carrega nossa dedicação em tornar realidade os projetos e sonhos de quem cria com as mãos e o coração. Atendemos desde profissionais da moda até artesãos, decoradores e entusiastas do “faça você mesmo”.
+        </p>
+        <p>
+          Nosso portfólio é cuidadosamente selecionado, reunindo tecidos para moda feminina e masculina, decoração, eventos, patchwork, artesanato e diversas outras aplicações. ✨Estamos sempre atentos às tendências do mercado✨, buscando constantemente ✨novidades que encantem✨ e inspirem nossos clientes.
+        </p>
+        <p>
+          Mais do que vender tecidos, acreditamos na força da criatividade, no poder da inspiração e na importância de tornar o belo acessível a todos. Por isso, praticamos ✨preços justos✨ e buscamos cultivar ✨relacionamentos duradouros✨ com cada pessoa que passa por aqui.
+        </p>
+        <p>
+          Seja bem-vindo à ✨BELLA COLOR✨, onde cada cor conta uma história e cada cliente é parte do nosso propósito.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <a href="PRINGLES.html" class="btn btn-primary" style="margin-top: 20px;">Acessar a Loja Online</a>
+      </div>
+    </div>
+    
+    <div class="product-grid">
+  <div class="product-card">
+    <img src="img/tecido1.webp" alt="Tecido Floral" class="product-image">
+    <div class="product-info">
+      <h3>Tecido Floral</h3>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="img/tecido2.webp" alt="Oxford" class="product-image">
+    <div class="product-info">
+      <h3>Oxford</h3>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="img/tecido3.webp" alt="Microfibra" class="product-image">
+    <div class="product-info">
+      <h3>Microfibra</h3>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="img/tecido4.webp" alt="Tricoline" class="product-image">
+    <div class="product-info">
+      <h3>Tricoline</h3>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="img/tecido5.webp" alt="Viscose" class="product-image">
+    <div class="product-info">
+      <h3>Viscose</h3>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="img/tecido6.webp" alt="Cetim" class="product-image">
+    <div class="product-info">
+      <h3>Cetim</h3>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="img/tecido7.webp" alt="Linho" class="product-image">
+    <div class="product-info">
+      <h3>Linho</h3>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Seção Nossa Equipe -->
+<section class="section">
+  <div class="flex-container">
+    <div class="flex-item fade-in">
+      <img src="img/equipe-bella-color.webp" alt="Equipe Bella Color" style="width: 100%; border-radius: 12px; box-shadow: var(--sombra);">
+    </div>
+    
+    <div class="flex-item fade-in">
+      <div style="padding: 30px;">
+        <h2 style="margin-bottom: 20px; color: var(--rosa-escuro);">Nossa Equipe</h2>
+        <p>Contamos com profissionais especializados que entendem de tecidos e estão prontos para te ajudar a encontrar exatamente o que você precisa para seus projetos.</p>
+        <p>Desde designers até especialistas em atendimento, toda nossa equipe compartilha a mesma paixão por tecidos e qualidade.</p>
+        <p>Visite nossa loja física e conheça pessoalmente quem faz a Bella Color ser referência em tecidos!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Seção Produtos em Destaque -->
+<section class="section" style="background: #fff9fa;">
+  <div class="section-title">
+    <h2>Nossos Tecidos</h2>
+  </div>
+  
+  <div class="product-grid">
+    <div class="product-card fade-in">
+      <img src="img/tecido1.webp" alt="Tecido Tactel" class="product-image">
+      <div class="product-info">
+        <h3>Tactel</h3>
+       </div>
+    </div>
+    
+    <div class="product-card fade-in">
+      <img src="img/tecido2.webp" alt="Tecido Duna" class="product-image">
+      <div class="product-info">
+        <h3>Duna</h3>
+       </div>
+    </div>
+    
+    <div class="product-card fade-in">
+      <img src="img/tecido3.webp" alt="Tecido Matelassê" class="product-image">
+      <div class="product-info">
+        <h3>Matelassê</h3>
+       </div>
+    </div>
+    
+    <div class="product-card fade-in">
+      <img src="img/tecido7.webp" alt="Tecido Monaco" class="product-image">
+      <div class="product-info">
+        <h3>Monaco</h3>
+      </div>
+    </div>
+  </div>
+  
+  <div style="text-align: center; margin-top: 40px;">
+    <a href="PRINGLES.html" class="btn btn-primary">Ver Todos os Produtos</a>
+  </div>
+</section>
+
+<!-- Seção Fale Conosco -->
+<section class="section">
+  <div class="section-title">
+    <h2>Fale Conosco</h2>
+  </div>
+  
+  <div class="flex-container">
+    <div class="flex-item fade-in">
+      <form action="https://formsubmit.co/bellacolor717@gmail.com" method="POST" style="background: white; padding: 30px; border-radius: 12px; box-shadow: var(--sombra);">
+        <div class="form-group">
+          <input type="text" name="nome" placeholder="Seu nome" class="form-control" required>
+        </div>
+        
+        <div class="form-group">
+          <input type="email" name="email" placeholder="Seu e-mail" class="form-control" required>
+        </div>
+        
+        <div class="form-group">
+          <textarea name="mensagem" placeholder="Sua mensagem" class="form-control" rows="5" required></textarea>
+        </div>
+        
+        <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar Mensagem</button>
+      </form>
+    </div>
+    
+    <div class="flex-item fade-in">
+      <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: var(--sombra); height: 100%;">
+        <h3 style="margin-bottom: 20px; color: var(--rosa-escuro);">Informações de Contato</h3>
+        <p style="margin-bottom: 15px;"><strong>Endereço:</strong> Rua Silva Telles, 717 - São Paulo/SP</p>
+        <p style="margin-bottom: 15px;"><strong>Telefone:</strong> (11) 95083-9393</p>
+        <p style="margin-bottom: 15px;"><strong>Email:</strong> bellacolor717@gmail.com</p>
+        
+        <div style="margin-top: 30px;">
+          <h4 style="margin-bottom: 15px; color: var(--rosa-escuro);">Horário de Atendimento</h4>
+          <p>Segunda a Quinta: 8h às 17:30h</p>
+          <p>SEXTA: 8h às 16:30h</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Seção Newsletter - Atualizada com ícones SVG -->
+<section class="section" style="background: linear-gradient(135deg, var(--rosa-claro), var(--rosa-medio)); color: white; text-align: center;">
+  <div style="max-width: 600px; margin: 0 auto;">
+    <h2 style="margin-bottom: 20px;">Receba Novidades e Promoções</h2>
+    <p style="margin-bottom: 30px;">Cadastre-se para ficar por dentro das últimas coleções e ofertas exclusivas!</p>
+    
+    <form action="https://formsubmit.co/bellacolor717@gmail.com" method="POST" style="display: flex; max-width: 500px; margin: 0 auto;">
+      <input type="email" name="email" placeholder="Seu melhor e-mail" required 
+             style="flex: 1; padding: 12px 15px; border: none; border-radius: 30px 0 0 30px; font-size: 1rem;">
+      <button type="submit" class="btn btn-secondary" style="border-radius: 0 30px 30px 0; margin-left: -1px;">Cadastrar</button>
+    </form>
+    
+    <div style="margin-top: 30px; display: flex; justify-content: center; gap: 20px;">
+      <a href="https://wa.me/5511950839393" target="_blank" style="color: white; display: inline-flex; align-items: center; text-decoration: none;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-6.29-3.03c.545 1.422 1.578 2.506 1.923 2.592.347.086 1.246-1.074 1.246-1.074l-.37-.223s-.545-.204-.794-.347c-.249-.143-.371-.248-.557-.434-.186-.186-.735-.756-1.034-1.038-.173-.165-.297-.198-.446-.115-.149.083-.595.223-.595.223S11.6 10.3 11.182 9.83zM12 0a12 12 0 0 0-9.862 18.865L0 24l5.418-1.955A12 12 0 1 0 12 0zm0 22.5a10.5 10.5 0 1 1 0-21 10.5 10.5 0 0 1 0 21z"/>
+        </svg>
+        WhatsApp
+      </a>
+      <a href="https://instagram.com/bellacolor_ofc" target="_blank" style="color: white; display: inline-flex; align-items: center; text-decoration: none;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
+          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+        </svg>
+        Instagram
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Rodapé -->
+<footer>
+  <div class="footer-content">
+    <div class="footer-column">
+      <h3>BELLA COLOR</h3>
+      <p style="color: rgba(255,255,255,0.8); margin-bottom: 20px;">Os melhores tecidos para suas criações, com qualidade e variedade incomparáveis.</p>
+      <div class="social-links">
+        <a href="https://facebook.com" target="_blank">FB</a>
+        <a href="https://instagram.com/bellacolor_ofc" target="_blank">IG</a>
+        <a href="https://wa.me/5511950839393" target="_blank">WA</a>
+      </div>
+    </div>
+    
+    <div class="footer-column">
+      <h3>Links Rápidos</h3>
+      <ul class="footer-links">
+        <li><a href="PRINGLES.html">Loja Virtual</a></li>
+        <li><a href="#">Sobre Nós</a></li>
+        <li><a href="#">Catálogo</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-column">
+      <h3>Contato</h3>
+      <ul class="footer-links">
+        <li><a href="mailto:bellacolor717@gmail.com">bellacolor717@gmail.com</a></li>
+        <li><a href="tel:+5511950839393">(11) 95083-9393</a></li>
+        <li>Rua Silva Telles, 717</li>
+        <li>São Paulo - SP</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="copyright">
+    &copy; 2025 BELLA COLOR - Todos os direitos reservados
+  </div>
+</footer>
+
+<!-- Mapa -->
+<div style="width: 100%; height: 400px;">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.876123164595!2d-46.65398592468613!3d-23.54154036138775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDMyJzI5LjYiUyA0NsKwMzknMDguNiJX!5e0!3m2!1spt-BR!2sbr!4v1620000000000!5m2!1spt-BR!2sbr" 
+          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</div>
+
+<!-- Botão Flutuante para o Catálogo Local -->
+<a href="https://ltzhorus.github.io/Bella/" 
+   class="catalogo-btn" title="Abrir Catálogo" target="_blank">
+  📁 Catálogo
+</a>
+
+<!-- Botão do WhatsApp -->
+<a href="https://wa.me/5511950839393" class="whatsapp-btn" target="_blank">
+  <img src="https://cdn-icons-png.flaticon.com/24/3670/3670051.png" alt="WhatsApp">
+  Fale Conosco
+</a>
+
+<script>
+  // Animação de aparecimento suave
+  const fadeElements = document.querySelectorAll('.fade-in');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  fadeElements.forEach(el => {
+    observer.observe(el);
+  });
+
+  // Efeito hover nos cards de produto
+  const productCards = document.querySelectorAll('.product-card');
+  productCards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      card.style.transform = 'translateY(-10px)';
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'translateY(0)';
+    });
+  });
+</script>
+</body>
+</html>
